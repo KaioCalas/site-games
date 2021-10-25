@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?famil=Open+Sans');
+
+:root {
+    --left-bg-color: rgba(87, 84, 236, 0.7)
+    --right-bg-color: rgba(43, 43, 43, 0.8)
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #222;
+    font-family: 'Open Sans', sans-serif;
+    color: #222;
+    padding-bottom: 50px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav {
+    position: fixed;
+    background-color: #222;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 7px 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav.active {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav.active a{
+    color: #000;
+}
+
+.nav.active .container {
+    padding: 10px 0;
+}
+
+.nav a.current, .nav a:hover {
+    color: #c0392b;
+    font-weight: bold;
+}
+
+.hero {
+    background-image: url('https://images.pexels.com/photos/450035/pexels-photo-450035.jpeg?auto-compresscs=tinysrgb&dpr=2&h=750&w=1260');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    height:100vh;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px;
+    z-index: -2;
+}
+
+.hero::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.hero h1 {
+
+    font-size: 46px;
+    margin: -20px 0 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.content h2 {
+    color: rgb(109, 100, 240);
+    font-size: 150%;
+    margin: 20px 0;
+}
+
+.content h3 {
+    color: #21b104;
+    font-size: 150%;
+    margin: 20px 0;
+}
+
+.content p {
+    color: #fff;
+    line-height: 30px;
+    letter-spacing: 1.2px;
+}
+
+table {
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(41, 40, 40);
+    border-radius: 10px;
+}
+
+td {
+    background-color: #222;
+    border: 1px solid #222;
+    border-radius: 10px;
+    padding: 7px 15px;
+    margin: -20px 0 20px;
+    
+}
+
+tr {
+    padding: 20px 0 ;
+}
+
+img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+h4, h1 {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+input[type=submit] {
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 7px 15px;
+    cursor: pointer;
+    box-shadow: 0 2px 7px rgba(255, 255, 255, 0.3);
+}
+
+input[type=submit]:hover {
+    background-color: #5762f8;
+    color: #fffcfb;
+    font-weight: bold;
+
+}
+
+input[name=x]:hover {
+    background-color: #21b104;
+    color: #fffcfb;
+    font-weight: bold;
+
+}
+
+
+h1[name=play] {
+    background-color: steelblue;
+    color: #222;
+}
+
+
+h1[name=xbox] {
+    background-color: green;
+    color: #222;
+}
+
+.container2 {
+    position:relative;
+    width: 100%;
+    height: 100%;
+    background: #222;
+
+}
+
+.split {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    
+}
+
+.split.left {
+    left: 0;
+    background: url('ps5.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.split.left::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--left-bg-color)
+}
+
+.split.right {
+    right: 0;
+    background: url('xbox.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.split.right::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--right-bg-color)
+}
+
+img[name=left] {
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+h1[name=ps] {
+    color:#5762f8;
+}
+
+h1[name=xbo] {
+    color: #21b104;
+}
+
+.btn {
+    position: absolute;
+    top:570px;
+    left: 200px;
+    right: 1px;
+    text-decoration: none;
+    color: #fff;
+    border: #fff solid 0.2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 15rem;
+    padding: 1.5rem;
+}
+
+.btn[name=p]:hover {
+    background-color: #0711a0;
+    color: #fffcfb;
+    font-weight: bold;
+}
+
+.btn[name=x]:hover {
+    background-color: #21b104;
+    color: #fffcfb;
+    font-weight: bold;
+}
+
+.map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contato {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    position: relative;
+    left: 20px;
+    bottom: 124px;
+    font-size: 1rem;
+    padding: 7px 15px;
+    margin: 3px;
+    line-height: 30px;
+    letter-spacing: 1.2px;
+    
+}
+
+h3[name=cadastro]{
+    color: #fff;
+}
+
+.container3 {
+    background-color: rgba(0, 0, 0,0.4);
+    padding: 20px 40px;
+    border-radius: 10px;
+}
+
+.form-control  {
+    position: relative;
+    margin: 20px 0 40px;
+    width: 300px;
+}
+
+.form-control input{
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px rgb(73, 114, 248) solid;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    color: #ffffff
+}
+
+.form-control input:focus,
+.form-control input:valid {
+    outline: 0;
+    border-bottom-color: rgb(2, 4, 104);
+}
+
+.form-control label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+}
+
+.form-control span {
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    transition: 0.3s cubic-bezier(0.68);
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+    color: lightblue;
+    transform: translateY(-30px);
+}
+
+.button {
+    cursor: pointer;
+    width: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 30px;
+}
+
+.button-login,
+.button-register {
+    font-size: 50px;
+    
+}
+
+
+
+
